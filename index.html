@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <section class="balance-section">
+            <h2>Your Balance</h2>
+            <h1 id="balance">₦0.00</h1>
+
+            <div class="summary">
+                <div class="box income">
+                    <p>Income</p>
+                    <span id="income">+₦0.00</span>
+                </div>
+
+                <div class="box expense">
+                    <p>Expenses</p>
+                    <span id="expense">-₦0.00</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h3>Add Transaction</h3>
+            <form id="form">
+                <div class="form-control">
+                    <label>Description</label>
+                    <input type="text" id="description-input" placeholder="e.g. Food, Salary">
+                    <small id="descriptionError">Description is required</small>
+                </div>
+
+                <div class="form-control">
+                    <label>Amount</label>
+                    <input type="number" id="amount-input" placeholder="Enter amount">
+                    <small id="amountErrorMsg">Amount must be positive</small>
+                </div>
+
+                <div class="form-control type-select">
+                    <label>Type</label>
+                    <div>
+                        <label>
+                            <input type="radio" name="type" value="income" id="income-btn">
+                            Income
+                        </label>
+
+                        <label>
+                            <input type="radio" name="type" id="expense-btn" value="expense">
+                            Expense
+                        </label>
+                        <small id="selectError">Select expense or income</small>
+                    </div>
+                </div>
+
+                <button class="btn" id="add-transaction">Add Transaction</button>
+                <small id="errorMsg">Fill the form approiately</small>
+            </form>
+        </section>
+
+        <section class="transactions-section">
+            <label for="categories">
+                <select name="categories" id="categories">
+                    <option value="all">All Expense</option>
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+            </label>
+            <h3>History</h3>
+            <ul id="history-list">
+                <li class="transaction income">
+                    <div class="left">
+                        <p>Salary</p>
+                        <small>Mar 18, 2026</small>
+                    </div>
+
+                    <div class="right">
+                        <span>+₦50,000</span>
+                        <button class="delete-btn">×</button>
+                    </div>
+                </li>
+            </ul>
+
+        </section>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+

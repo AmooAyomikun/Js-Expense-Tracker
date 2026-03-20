@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+}
+
+.balance-section {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.balance-section h2 {
+    font-weight: 500;
+    color: #64748b;
+}
+
+.balance-section h1 {
+    font-size: 2.8rem;
+    margin: 10px 0 20px;
+    color: #0f172a;
+}
+
+.summary {
+    display: flex;
+    gap: 10px;
+}
+
+.box {
+    flex: 1;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.box p {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.box span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.box.income span {
+  color: #16a34a;
+}
+
+.box.expense span {
+  color: #dc2626;
+}
+
+.form-section {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.form-section h3 {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  margin-bottom: 15px;
+}
+
+.form-control label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.form-control input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #cbd5f5;
+}
+
+.form-control input:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+
+.type-select div {
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #4f46e5;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #4338ca;
+}
+
+#errorMsg{
+    color: #dc2626;
+    visibility: hidden;
+}
+
+#selectError{
+    color: #dc2626;
+    visibility: hidden;
+}
+
+#amountErrorMsg{
+    color: #dc2626;
+    visibility: hidden;
+}
+
+#descriptionError{
+    color: #dc2626;
+    visibility: hidden;
+}
+
+.transactions-section h3 {
+  margin-bottom: 10px;
+}
+
+#list {
+  list-style: none;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.transaction {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  align-items: center;
+  border-left: 5px solid #ccc;
+}
+
+.transaction.income {
+  border-left-color: #16a34a;
+}
+
+.transaction.expense {
+  border-left-color: #dc2626;
+}
+
+.transaction .left p {
+  font-weight: 500;
+}
+
+.transaction small {
+  color: #64748b;
+  font-size: 0.75rem;
+}
+
+.transaction .right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.transaction.income span {
+  color: #16a34a;
+}
+
+.transaction.expense span {
+  color: #dc2626;
+}
+
+.delete-btn {
+  border: none;
+  background: transparent;
+  color: #94a3b8;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  color: #ef4444;
+}
+
+#list::-webkit-scrollbar {
+  width: 5px;
+}
+
+#list::-webkit-scrollbar-thumb {
+  background: #cbd5f5;
+  border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 700px;
+  }
+
+  .balance-section h1 {
+    font-size: 3.2rem;
+  }
+
+  .form-section,
+  .transactions-section {
+    padding: 25px;
+  }
+}
+
+
