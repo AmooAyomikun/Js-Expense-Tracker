@@ -1,4 +1,4 @@
-Expense Tracker
+**Expense Tracker**
 
 A simple and intuitive Personal Expense Tracker Web App that allows users to manage income and expenses, track financial balance, and maintain a persistent transaction history using browser storage.
 
@@ -19,6 +19,10 @@ This application enables users to:
   Persist data using localStorage
 
 The project is built using Vanilla JavaScript, focusing on clean logic, DOM manipulation, and state management without external libraries.
+
+**DEMO**
+You can view the app live
+https://amooayomikun.github.io/Js-Expense-Tracker/
 
 **Financial Summary**
 
